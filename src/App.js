@@ -7,8 +7,7 @@ function App() {
   const [picture, setPicture] = useState();
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`).then(response => {
-
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=YMseM4pPobt6vgrw4usOzcLFKKtgo2h2ngmn7qxw`).then(response => {
       let { date, title, url, hdurl, copyright } = response.data;
 
       date = date.split('-').reverse().join('/');
