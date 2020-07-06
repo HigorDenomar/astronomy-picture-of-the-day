@@ -29,9 +29,15 @@ header {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 40px;
   position: fixed;
+}
+
+header p {
+  text-align: right;
+  position: absolute;
+  right: 40px;
 }
 
 main {
@@ -47,10 +53,16 @@ main {
 
 img {
   width: 100%;
-  border-radius: 10px 50px;
+  padding: 8px 0;
+  border-radius: 5px 10px;
   transition: 0.5s;
 }
 
 img:hover {
   transform: scale(1.01);
+}
+
+p:last-child {
+  text-align: right;
+  margin-right: 12px;
 }

@@ -27,16 +27,18 @@ function App() {
   return (
     <>
       <header>
-        <h1>{picture?.title}</h1>
+        <h1>An astronomical picture every day</h1>
         <p><b>{picture?.date}</b></p>
       </header>
 
       <main>
         {picture ?
           <>
-            {picture.copyright ? <p>Author: <i>{picture?.copyright}</i></p> : <p>Author: <i>Desconhecido</i></p>}
-            <br />
+            <p><b>{picture?.title}</b></p>
+
             {picture.url ? <img src={picture?.url} alt={picture?.title} /> : <p>{picture?.explanation}</p>}
+
+            {picture.copyright ? <p>Author: <i>{picture?.copyright}</i></p> : <p>Author: <i>Desconhecido</i></p>}
 
           </>
           :
